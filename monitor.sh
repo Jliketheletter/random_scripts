@@ -2,8 +2,8 @@
 
 
 # url of the site that that you are monitoring.
-
-url=http://jaywisniewski.com
+slackwebhook=https://
+url=http://
 
 
 # slack messaging function.
@@ -14,7 +14,7 @@ slack_msg () {
 msg=$1
 
 
-curl -X POST --data-urlencode "payload={\"channel\": \"#monitoring\", \"username\": \"Jarvis\", \"text\": \"${msg}\", \"icon_emoji\": \":robot_face:\"}" https://hooks.slack.com/services/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
+curl -X POST --data-urlencode "payload={\"channel\": \"#monitoring\", \"username\": \"Jarvis\", \"text\": \"${msg}\", \"icon_emoji\": \":robot_face:\"}" ${slackwebhook}
 
 
 }
